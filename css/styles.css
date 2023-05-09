@@ -1,0 +1,382 @@
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+  font-family: "Euclid Circular A", "Poppins";
+  color: #222222;
+}
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  width: 200%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  background: #f7f7f7;
+}
+
+img {
+  width: 130rem;
+  height: 130rem;
+  object-fit: contain;
+}
+
+.banner h2 {
+  background: #f7f7f7;
+}
+.footer h2 {
+  margin: 20px 0;
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 0 16px;
+  background: #fff;
+  box-shadow: 0 0 20px rgb(0 0 0 / 8%);
+}
+
+nav span {
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+nav a.active {
+  color: red;
+}
+nav img {
+  width: 32px;
+  height: 32px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 50px;
+}
+
+h2 {
+  margin: 50px 0 20px;
+}
+
+p {
+  opacity: 0.66;
+  font-size: 14px;
+}
+
+.banner {
+  flex-direction: row;
+  text-align: left;
+  gap: 30px;
+  background: #dcd7c9;
+  height: 100%;
+}
+
+.footer {
+  background: #ffffff;
+  text-align: left;
+}
+.footer1 {
+  background: #dcd7c9;
+}
+
+.footer3 {
+  background: #dcd7c9;
+}
+.dev-icons {
+  font-size: 3rem;
+}
+
+.footerc {
+  background-color: #f9f5eb;
+  color: #2c3639;
+  font-size: 18px;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+.panel {
+  width: 100%;
+  height: 100%;
+}
+
+.container .panel:nth-child(odd) {
+  background: #fff;
+}
+section.resume-section {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  max-width: 75rem;
+}
+section.resume-section .resume-section-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-md-row {
+  flex-direction: row !important;
+}
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+#sideNav .navbar-brand .img-profile {
+  max-width: 30rem;
+  max-height: 30rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.subheading {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.text-primary {
+  color: rgba((189, 93, 56), 1) !important;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  color: #343a40;
+}
+h1,
+.h1 {
+  font-size: calc(1.525rem + 5.7vw);
+}
+@media (min-width: 1200px) {
+  h1,
+  .h1 {
+    font-size: 6rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: calc(1.275rem + 2.7vw);
+}
+@media (min-width: 1200px) {
+  h2,
+  .h2 {
+    font-size: 3.5rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: calc(1.1325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+}
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+.social-icons .social-icon:hover {
+  background-color: #bd5d38;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.text-warning {
+  color: rgba(255, 193, 7) !important;
+}
+@media screen and (min-width: 500px) {
+  .menumobile {
+    display: none;
+  }
+  .navmobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  .nav {
+    display: none;
+  }
+  .navmobile {
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    transition: transform 0.8s ease;
+  }
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .navitemsmobile {
+    display: list-item;
+    color: black !important;
+    width: 100%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 600px) {
+  .body {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 700px) {
+}
+@media screen and (min-width: 900px) {
+}
+@media screen and (min-width: 1250px) {
+  main {
+    max-width: 1250px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Untuk perangkat tablet dengan lebar layar kurang dari atau sama dengan 768px */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  h1,
+  h2,
+  h3,
+  li,
+  p {
+    font-size: 9px;
+  }
+}
+
+/* Untuk perangkat desktop dengan lebar layar lebih dari 768px
+@media (min-width: 769px) {
+  .container {
+    width: 960px;
+    padding: 30px;
+  }
+} */

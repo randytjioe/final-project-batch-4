@@ -1,208 +1,391 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Profil Saya</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="asset/css/styleVALUEJS.css">
-    </head>
-      <!-- 1Untuk mengisi perubahan pada form, maka akan bisa diterapkan pada form. 
-           Mengubah Button Contact menjadi Button Edit
-           hal 1 : memberikan identitas pada setiap Komponen pada script HTML Kita
-           jadi setiap komponen kita berikan nama/id supaya lebih mudah untuk mengubah nanti. 
-       -->
-    <body>
-        <nav>
-            <div class="menu-mobile">
-                 <!-- 2tambahkan -->
-                <a href="#" onclick="showMenu()">menu</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Randy Portfolio" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <title>Randy Portfolio</title>
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar">
+      <img src="assets/img/logo.png" />
+      <div>
+        <a data-scroll="about" href="#about" class="active"> About </a>
+        <a data-scroll="experiences" href="#experiences"> Experiences </a>
+        <a data-scroll="education" href="#education"> Education </a>
+        <a data-scroll="skills" href="#skills"> Skills </a>
+        <a data-scroll="interests" href="#interests"> Interests </a>
+        <a data-scroll="award" href="#award"> Award </a>
+      </div>
+    </nav>
+    <div class="container-fluid p-0">
+      <section class="banner">
+        <span class="d-none d-lg-block"
+          ><img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="assets/img/profile.jpg"
+            alt="..."
+        /></span>
+        <section class="resume-section" id="about">
+          <div class="resume-section-content">
+            <h1 class="mb-0">Randy</h1>
+            <div class="subheading mb-5">
+              Padang, West Sumatera · (62) 878-95238280 ·
+              <a href="mailto:randytjioe95@email.com">randytjioe95@email.com</a>
             </div>
-            <ul id="menu">
-                <li><a href="/">HOME</a></li>
-                <li><a href="#">PRODUCT</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">INVENTORY</a></li>
-            </ul>
-        </nav>
-
-        <section id="box-profile">
-            <div class="img-profile">
-                <div class="photo" style="background-image: url(file:///Users/swijaya/Downloads/WFDB2/portfoliotm6/asset/image/download.jpeg)">
-                </div>
+            <p class="lead mb-5">
+              My name is Randy from Padang, West Sumatra. I graduated from
+              Andalas University in mathematics major with a GPA of 3.23. During
+              the college life, I continued to improve my soft skills such as
+              involving several organizations e.g. BEM KM FMIPA, HIMATIKA, and
+              AIESEC; winning the 4th National Mathematics and Natural Sciences
+              Olympiad at the University level; and being a Campus Activist Star
+              in the Faculty and Best Graphic Designer in the Department. In
+              addition, I was a speaker in a Roundtable Seminar: Exchange
+              Student Collaboration between Andalas University and Ibaraki
+              University. Then, I became a judge of the Instagram Video
+              Competition and Poster Competition.
+            </p>
+            <div class="social-icons">
+              <a
+                class="social-icon"
+                href="https://www.linkedin.com/in/randytjioe/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="social-icon" href="https://github.com/randytjioe"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                class="social-icon"
+                href="https://www.instagram.com/randytjioe/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="social-icon" href="https://www.facebook.com/randyszhou/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
             </div>
-            <div class="description">
-                <!-- 2Pada bagian Nama tambahkan atribut ID. penting mudah diingat dan dipahami!! 
-                kemudian pada roles kasih nama prole, lalu 
-                pada button contact ubah nama menjadi EDIT lalu value pada ahref tambahkan inputform, 
-                save - debug 
-                pada saat klik edit akan mengarah ke form input.
-
-                next
-
-                kita kasih atribut onclick=editForm pada button edit 
-
-                -->
-                <h1 id="pName">Nama Anda</h1>
-                <p id="pRole">Front End Designer</p>
-                <a href="#input-form" class="button bg-blue" onclick="editForm()">Edit</a>
-                <a href="#" class="button border-green">Resume</a>
-            </div>
-            <!-- 3Pada komponent class information tambahkan juga 
-                 A. id="pAvailable" pada text-gray
-                 B. id="pAvailable" pada text-gray
-                 C. id="pAvailable" pada text-gray
-                 D. id="pAvailable" pada text-gray
-
-                 Pada section Inputform kita tambahka juga masing2 input id 
-                 A. input id=inpname
-                 A. input id=inprole
-                 A. input id=inpavailability
-                 A. input id=inpage
-                 A. input id=inplocation
-                 A. input id=inpyears
-                 A. input id=inpemail
-
-                 pada tombol submit tambahkan onclik dengan function simpanform
-
-                 save.
-
-                -->
-            <div class="information">
-                <div class="data">
-                    <p class="field">Availability</p>
-                    <p id="pAvailable" class="text-gray">Full Time</p>
-                </div>
-                <div class="data">
-                    <p class="field">Usia</p>
-                    <p id="pAge" class="text-gray">19</p>
-                </div>
-                <div class="data">
-                    <p class="field">Lokasi</p>
-                    <p id="pLocation" class="text-gray">Jakarta</p>
-                </div>
-                <div class="data">
-                    <p class="field">Pengalaman</p>
-                    <p id="pExperience" class="text-gray">2</p>
-                </div>
-                <div class="data">
-                    <p class="field">Email</p>
-                    <p id="pEmail" class="text-gray">email@gmail.com</p>
-                </div>
-            </div>
+          </div>
         </section>
-
-        <section id="input-form">
-            <form method="#" action="#">
-                <div class="form">
-                    <label>Nama</label>
-                    <input id="inpName" type="text" name="nama" placeholder="masukkan nama anda">
-                </div>   
-                <div class="form">
-                    <label>Role</label>
-                    <input id="inpRole" type="text" name="role">
-                </div>  
-                <div class="form">
-                    <label>Availability</label>
-                    <input id="inpAvailability" type="text" name="Availability">
-                </div>  
-                <div class="form">
-                    <label>Usia</label>
-                    <input id="inpUsia" type="number" name="usia">
-                </div>  
-                <div class="form">
-                    <label>Lokasi</label>
-                    <input id="inpLokasi" type="text" name="lokasi">
-                </div>  
-                <div class="form">
-                    <label>Years Experience</label>
-                    <input id="inpYears" type="number" name="experience">
-                </div>  
-                <div class="form">
-                    <label>Email</label>
-                    <input id="inpEmail" type="email" name="email">
-                </div>            
-                <div class="form">
-                    <input onclick="simpanForm()" type="submit" name="submit" value="SUBMIT" class="bg-green">
+      </section>
+      <div class="container">
+        <section class="description panel blue" id="experiences">
+          <div class="resume-section-content">
+            <h2 class="mb-2">Experience</h2>
+            <div
+              class="d-flex flex-column flex-md-row justify-content-between mb-5"
+            >
+              <div class="flex-grow-1">
+                <h3>PT MEGA FINANCE</h3>
+                <h4 class="mb-0">Control & Development Specialist</h4>
+                <div class="subheading mb-2">
+                  South Jakarta, DKI Jakarta, Indonesia
                 </div>
-            </form>            
+                <p>
+                  <ul>
+                    <li>Controlling marketing costs</li>
+                    <li>Create and analyze the use of marketing costs by Branches, Areas, and Dealers</li>
+                    <li>Create
+                  and Analyze for Program costs</li>
+                    <li>Support calculations in
+                  developing marketing programs in the system</li>
+                    <li>Make a
+                  Marketing Profile Report by Branches and Dealers</li>
+                    <li>Support
+                  marketing program analysis requests</li>
+                    <li>Make a Special
+                  Marketing Fee Submission on request</li>
+                    <li>Controlling and
+                  validating the submission of Marketing Fees from branches</li>
+                    <li>Create data according to user's request</li>
+                  </ul>
+                
+                </p>
+              </div>
+              <div class="flex-shrink-0">
+                <span class="text-primary">April 2022 – November 2022</span>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-column flex-md-row justify-content-between mb-5"
+            >
+              <div class="flex-grow-1">
+                <h4 class="mb-0">Data Control & Monitoring</h4>
+                <div class="subheading mb-2">
+                  South Jakarta, DKI Jakarta, Indonesia
+                </div>
+                <p>
+                  <ul>
+                    <li>Interpret data, analyze results using statistical techniques
+                  and provide ongoing reports.</li>
+                    <li>Identify, analyze, and
+                  interpret trends or patterns in complex data sets.</li>
+                    <li>Find and
+                  define new process improvement opportunities.</li>
+                    <li>Ensures data
+                  integrity by monitoring and validating information.</li>
+                  </ul>
+                  
+                </p>
+              </div>
+              <div class="flex-shrink-0">
+                <span class="text-primary"
+                  >September 2018 – Agustus 2019, Juni 2020-Maret 2020</span
+                >
+              </div>
+            </div>
+          </div>
         </section>
+        <section class="panel red" id="experiences1">
+          <div class="resume-section-content">
+            <h4 class="mb-5">Experience</h4>
+            <div
+              class="d-flex flex-column flex-md-row justify-content-between mb-5"
+            >
+              <div class="flex-grow-1">
+                <h4 class="mb-0">Branch Manager</h4>
+                <div class="subheading mb-3">Ngawi, East Java, Indonesia</div>
+                <p>
+                  <ul>
+                    <li>Supervise, coordinate, and monitor all operational
+                  activities; also lead marketing activities.</li>
+                    <li>Observe and
+                  assess employee performance; also provide solutions to various
+                  problems.</li>
+                  </ul>
+              
+                </p>
+              </div>
+              <div class="flex-shrink-0">
+                <span class="text-primary">September 2019 - May 2020</span>
+              </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+              <div class="flex-grow-1">
+                <h4 class="mb-0">Trainee ODP</h4>
+                <div class="subheading mb-3">Ciledug, West Java, Indonesia | Rengat, Riau, Indonesia | South Jakarta, DKI Jakarta, Indonesia </div>
+                <p>
+                  <h4>Collections Supervisor</h4>  
+                  <ul>
+                    <li>Ensure
+                  to achieve the quarterly target of collection management.</li>
+                    <li>Supervise and be responsible in the negotiation process with
+                  customers.</li>
+                    <li>versee the daily reports of all billing
+                  activities of each team.</li>
+                  </ul>
+                  <h4>Credit Supervisor</h4> <ul>
+                    <li>Assess the creditworthiness of existing clients;
+                  check financial transactions and credit history on a case by
+                  case basis.</li>
+                    <li>Determine in depth the level of risk involved,
+                  analyze data carefully and produce clear and objective
+                  reports.</li>
+                    <li> Develop a credit information model that predicts
+                  trends and patterns.</li>
+                    <li>Provide recommendations related to
+                  credit risk analysis and assessment.</li>
+                  </ul> 
+                  <h4>• Trainee ODP </h4> 
+                  <ul>
+                    <li>Learn company regulations and job descriptions for one
+                  month.</li>
+                    <li>Practice the knowledge learned at the branch office.</li>
+                  </ul>
+           
+                </p>
+              </div>
+              <div class="flex-shrink-0">
+                <span class="text-primary">October 2017 - August 2018</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="footer1" id="education">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Education</h2>
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3>University of Andalas</h3>
+              <div class="subheading mb-3">Bachelor of Science</div>
+              <div>Mathematics & Natural Science - Mathematics</div>
+              <p>GPA: 3.23</p>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Juli 2013 - Juni 2017</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Don Bosco Senior High School</h3>
+              <div class="subheading mb-3">Natural Sciences</div>
+             
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Juni 2010 - Juni 2013</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer2" id="skills">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Skills</h2>
+          <div class="subheading mb-3">Programming Languages & Tools</div>
+          <ul class="list-inline dev-icons">
+            <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+            <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
 
-         <!-- 4Pertama kita buat sebuah variabel formenu mengarah ke id inputform.
-            kemudian formenu kita panggil , kita ubah dan style dan display menjadi none.
-            lalu save - debug
-            "Halaman Form Hilang" 138-139
-
-            5Fungsiberikutnya seperti editform line144-157 dan simpanform line148-150
-            EditForm
-            buat logika pada code menggunakan if dg kondisi awal
-            formMenu style displaynya none maka akan diubah jadi block, selain itu pada else
-            maka tampilannya tetap none.
-            simpan - debug
-
-            6Selanjutnya pada line 164 - 172menampilkan nama masuk dalam form nama dsterusnya. 
-            caranya buat sebuah variable name kita ambil value dengan id yang sudah didefinisikan tadi cth pName, kemudian ambil innerhtml nya lalu
-            pada bagian input nama pada form dg nama id InpName. document.getelementby id
-            lalu ubah value menjadi name yang berasal dari variable yang sudah dibuat diatas. 
-            save - debug
-
-            QUIZ = lakukan untuk file selanjutnya. 
-            save-debug.
-        -->
-
-
-        <script>
-            var formMenu = document.getElementById("input-form");
-            formMenu.style.display="none";
+            <li class="list-inline-item"><i class="fab fa-react"></i></li>
+            <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+  
+          </ul>
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <span class="fa-li"><i class="fas fa-check"></i></span>
+              Website Development
+            </li>
+          
+            <li>
+              <span class="fa-li"><i class="fas fa-check"></i></span>
+              Cross Functional Teams
+            </li>
+            <li>
+              <span class="fa-li"><i class="fas fa-check"></i></span>
+              Agile Development & Scrum
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer3" id="interests">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Interests</h2>
+          <p>
+            Web Developer, Problem Solving, Analyst, Mathematics, Design, Marketing.
+          
+          </p>
+          <p class="mb-0">
+             Apart from being a web developer, i like solve the bug. As a data analyst, I create pricing strategies, forecast sales, develop products. As a mathematics
+graduate, I apply my knowledge in the fields of analyst, marketing, management, and forecasting.
+I am eager to learn new things and upgrade myself consistently.
+          </p>
+        </div>
+      </section>
+      <section class="footer4" id="award">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Awards & Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+              Data Analyst Professional Academy 2022 in Digital Talent Scholarship Kominfo.
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+              Full Stack Data Science Academy 2022 in Fullstack Bangelore.
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
             
-            function editForm(){
-                if(formMenu.style.display === "none"){
-                    formMenu.style.display = "block";
-                }else{
-                    formMenu.style.display = "none";
-                }
-
-                var name = document.getElementById("pName").innerHTML;
-                var role = document.getElementById("pRole").innerHTML;
-                var available = document.getElementById("pAvailable").innerHTML;
-                var usia = document.getElementById("pAge").innerHTML;
-                var lokasi = document.getElementById("pLocation").innerHTML;
-                var experience= document.getElementById("pExperience").innerHTML;
-                var email = document.getElementById("pEmail").innerHTML;
-
-                document.getElementById("inpName").value=name;
-                document.getElementById("inpRole").value=role;
-                document.getElementById("inpAvailability").value=available;
-                document.getElementById("inpUsia").value=usia;
-                document.getElementById("inpLokasi").value=lokasi;
-                document.getElementById("inpYears").value=experience;
-                document.getElementById("inpEmail").value=email;
-
-            }
-            
-            function simpanForm(){
-
-            }
-
-            function showMenu()
-            {
-                var menu = document.getElementById("menu");
-                var box = document.getElementById("box-profile");
-
-                if(menu.style.display === "block"){
-                    menu.style.display = "none";
-                    box.style.paddingTop = "0px";
-                }else{
-                    menu.style.display = "block";
-                    box.style.paddingTop = "125px";
-                }
-            }
-        </script>
-
-
-
-
-
-
-
-    </body>
+              Data Science Master Class 2022 in Wallstreet Development Program.
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+              
+              
+              Data Management Business Analytics 2022 in Iykra.
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+             
+             
+              Google Data Analytics 2021 in Google.
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+              
+              Online Academy Digital Talent Scholarship 2020, Topic: Digital Skills- Microsoft.
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+             Master Advanced Excel Data & Analytics Skills 2020 in LinkedIn Learning.
+            </li>
+             <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+            Workshop Time Series Forecasting with R 2017 in Andalas University.
+            </li>
+             <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+             SEAMS (Southeast Asian Mathematical Society) SCHOOL 2016 in Sanata Dharma University, Yogyakarta. Topic: Stochastic Analysis.
+            </li>
+             <li>
+              <span class="fa-li"
+                ><i class="fas fa-trophy text-warning"></i
+              ></span>
+             Peace Leader Leadership School (Sekolah Kepemimpinan Mahasiswa MIPA) 2013 – 2014 in Andalas University.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+      integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./scripts/index.js"></script>
+    <footer class="footerc">
+      <p>Copyright © 2023 - Randy Portfolio</p>
+    </footer>
+  </body>
 </html>
