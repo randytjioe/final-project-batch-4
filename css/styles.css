@@ -57,6 +57,7 @@ nav {
   padding: 0 24px 0 16px;
   background: #fff;
   box-shadow: 0 0 20px rgb(0 0 0 / 8%);
+  box-sizing: border-box;
 }
 
 nav span {
@@ -175,7 +176,7 @@ section.resume-section .resume-section-content {
   margin-bottom: 3rem !important;
 }
 .flex-shrink-0 {
-  flex-shrink: 0 !important;
+  flex-shrink: 1 !important;
 }
 .d-flex {
   display: flex !important;
@@ -305,78 +306,43 @@ h3,
 .text-warning {
   color: rgba(255, 193, 7) !important;
 }
-@media screen and (min-width: 500px) {
-  .menumobile {
-    display: none;
-  }
-  .navmobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 499px) {
-  .nav {
-    display: none;
-  }
-  .navmobile {
-    z-index: 10;
-    background-color: #fff;
-    width: 100%;
-    position: absolute;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-    transition: transform 0.8s ease;
-  }
-  .open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  .navitemsmobile {
-    display: list-item;
-    color: black !important;
-    width: 100%;
-    text-align: left;
-  }
-}
-@media screen and (min-width: 600px) {
-  .body {
-    font-size: 9px;
-  }
-}
-@media screen and (min-width: 700px) {
-}
-@media screen and (min-width: 900px) {
-}
-@media screen and (min-width: 1250px) {
-  main {
-    max-width: 1250px;
-  }
-}
+
 @media (max-width: 600px) {
   .container {
-    width: 100%;
-    padding: 10px;
-  }
-}
-
-/* Untuk perangkat tablet dengan lebar layar kurang dari atau sama dengan 768px */
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
+    width: 200%;
     padding: 20px;
   }
   h1,
   h2,
   h3,
+  h4,
+  div,
+  .subheading,
+  .navbar a,
   li,
+  .text-primary,
   p {
     font-size: 9px;
   }
+  .social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #495057;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 
-/* Untuk perangkat desktop dengan lebar layar lebih dari 768px
-@media (min-width: 769px) {
-  .container {
-    width: 960px;
-    padding: 30px;
-  }
-} */
+button {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
